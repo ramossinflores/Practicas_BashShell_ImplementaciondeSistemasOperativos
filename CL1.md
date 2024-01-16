@@ -121,7 +121,7 @@
 
     ```bash
     cd /bin
-    ls | egrep "s$|r$"
+    ls | egrep "s$|r$S"
     ls | egrep ^[a-z]{2}c[a-z]$
-     ls | egrep "[aeiou][0-9]$"
+    ls | egrep "[aeiou][0-9]$"
     ```
