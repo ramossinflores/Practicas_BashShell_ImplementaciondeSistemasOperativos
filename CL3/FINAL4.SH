@@ -5,7 +5,7 @@ echo "${regu[@]}"
 i=1
 while [ $i -ge 1 -a $i -le 7 ]
 do
-read -p "Indica orden: " ch
+read -p "Indica una orden: " ch
 if [ $ch = 'derecha' ]
     then
         if [ $i -le 6 ]
@@ -32,8 +32,11 @@ elif [ $ch = 'izquierda' ]
             echo "${regu[@]}"
             let i=i-1        
         fi
+elif [ $ch = 'fin' ]
+    then
+    exit
 else
-echo "Por favor escribe derecha o izquierda"
+echo "Por favor escribe derecha o izquierda o fin"
 echo "${regu[@]}"
 fi
 done
