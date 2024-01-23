@@ -11,7 +11,7 @@ sum=0;
                                         then
                                         echo -e " \033[34m Haz ganado. El CPU ha perdido \033[34m"
                                         break
-                                    elif [[ $(( $randomNumber - $sum )) -le 3 ]]
+                                    elif [[ $(( $randomNumber - $sum )) -le 4 ]]
                                         then
                                         let CPU=$randomNumber-$sum
                                         echo -e " \033[34m El CPU escoge $CPU y ha ganado \033[34m"

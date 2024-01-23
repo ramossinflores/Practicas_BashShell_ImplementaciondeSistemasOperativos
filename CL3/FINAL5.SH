@@ -9,7 +9,7 @@ sum=0;
                             let sum=$player1+$sum
                                     if [[ $sum = $randomNumber ]]
                                     then
-                                        echo -e " \033[34m El jugador 2 ha perdido \033[34m"
+                                        echo -e " \033[34m El jugador 1 ha perdido \033[34m"
                                         break
                                     fi
                             read -p "Hay $(($randomNumber - $sum)) chinos en la mesa. Jugador 2 coge: " player2
@@ -18,7 +18,7 @@ sum=0;
                                     let sum=$player2+$sum
                                         if [[ $sum = $randomNumber ]]
                                         then
-                                            echo -e " \033[34m El jugador 1 ha perdido \033[34m"
+                                            echo -e " \033[34m El jugador 2 ha perdido \033[34m"
                                         fi
                                 else
                             echo "Por favor, introduce 1 o 2 o 3."
