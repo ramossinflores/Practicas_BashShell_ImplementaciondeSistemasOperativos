@@ -13,9 +13,22 @@ sum=0;
                                         break
                                     elif [[ $(( $randomNumber - $sum )) -le 4 ]]
                                         then
-                                        let CPU=$randomNumber-$sum
-                                        echo -e " \033[34m El CPU escoge $CPU y ha ganado \033[34m"
-                                        break                                
+                                            if [[ $(( $randomNumber - $sum )) -eq 4 ]]
+                                                then
+                                                let CPU=3
+                                                echo -e "Hay $(( $randomNumber - $sum )) chinos en la mesa \033[34m El CPU escoge $CPU y ha ganado \033[34m"
+                                                break
+                                            elif [[ $(( $randomNumber - $sum )) -eq 3 ]]
+                                                then
+                                                let CPU=2
+                                                echo -e "Hay $(( $randomNumber - $sum )) chinos en la mesa \033[34m El CPU escoge $CPU y ha ganado \033[34m"
+                                                break
+                                            elif [[ $(( $randomNumber - $sum )) -eq 2 ]]
+                                                then
+                                                let CPU=1
+                                                echo -e "Hay $(( $randomNumber - $sum )) chinos en la mesa \033[34m El CPU escoge $CPU y ha ganado \033[34m"
+                                                break
+                                                fi                                                
                                     else 
                                         CPU=$(($RANDOM % 3 + 1 ))
                                         echo "Hay $(( $randomNumber - $sum )) chinos en la mesa. CPU coge: $CPU" 
